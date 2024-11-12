@@ -1,71 +1,79 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import controller.ToDoController;
+import dto.Task;
 
 class Main {
     public static void main(String[] args) {
         new ToDoController().runToDoApp();
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
-        // List<Task> taskDatabase = new ArrayList<>();
-        // System.out.println("Hello! I am your Tasks app. Please tell me what operations you want to perform")
-        // var menu = """
-        //     1. Add a Task
-        //     2. Update task 
-        //     3. Delete task
-        //     4. List all Task
-        //     5. Exit
-        // """
-        // System.out.println(menu);
-        // System.out.println("Enter the opertions")
+        List<Task> taskDatabase = new ArrayList<>();
+        System.out.println("Hello! I am your Tasks app. Please tell me what operations you want to perform");
+        String menu = """ 
+    			1. Add a Task
+      			2. Update task 
+      			3. Delete task
+      			4. List all Task
+      			5. Exit
+                """;
+        System.out.println(menu);
+        System.out.println("Enter operation");
+        String taskname = myObj.nextLine();  // Read user input
         
-        // switch(userAction) {
-        //     case 1 -> addTask();
-        //     case 2 -> updateTask();
-        //     case 3 -> deleteTask();
-        //     case 4 -> getAllTasks();
-        //     cas3 5 -> System.exit();
-        //     default -> print("Invalid Input");
-        // }
+        switch (taskname) {
+            case "1. Add a Task":
+                addTask();
+                break;
+            case "2. Update task":
+                updateTask();
+                break;
+            case "3. Delete task":
+                deleteTask();
+                break;
+            case "4. List all Task":
+                getAllTasks();
+                break;
+            case "5. Exit":
+                break;
+        }
 
-        // Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        // System.out.println("Enter operation");
+        addTask() {
+            print("Enter the task name")
+            String taskName = // ask user using scanner 
+            print("enter the task deadline")
+            String deadline = // ask user 
+            Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
+            taskDatabase.add(task);
+        }
 
-        // String  = myObj.nextInt();  // Read user input
-        // System.out.println("Username is: " + userName);  // Output user input
-
-        // addTask() {
-        //     print("Enter the task name")
-        //     String taskName = // ask user using scanner 
-        //     print("enter the task deadline")
-        //     String deadline = // ask user 
-        //     Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
-        //     taskDatabase.add(task);
-        // }
-
-        // updateTask() {
-        //         print("Enter the task name")
-        //         String taskName = // ask user using scanner 
-        //         print("enter the task deadline")
-        //         String deadline = // ask user 
-        //         Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
-        //         taskDatabase.add(task);
-        //     }
+        updateTask() {
+                print("Enter the task name")
+                String taskName = // ask user using scanner 
+                print("enter the task deadline")
+                String deadline = // ask user 
+                Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
+                taskDatabase.add(task);
+            }
         
-        // deleteTask() {
-        //         print("Enter the task name")
-        //         String taskName = // ask user using scanner 
-        //         print("enter the task deadline")
-        //         String deadline = // ask user 
-        //         Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
-        //         taskDatabase.add(task);
-        //     }
+        deleteTask() {
+                print("Enter the task name")
+                String taskName = // ask user using scanner 
+                print("enter the task deadline")
+                String deadline = // ask user 
+                Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
+                taskDatabase.add(task);
+            }
         
-        // getAllTasks() {
-        //         print("Enter the task name")
-        //         String taskName = // ask user using scanner 
-        //         print("enter the task deadline")
-        //         String deadline = // ask user 
-        //         Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
-        //         taskDatabase.add(task);
-        //     }
+        getAllTasks() {
+                print("Enter the task name")
+                String taskName = // ask user using scanner 
+                print("enter the task deadline")
+                String deadline = // ask user 
+                Task task = new Task(Task.getTaskAutoId(), taskName, PENDING, deadline);
+                taskDatabase.add(task);
+            }
 }
 }
 
