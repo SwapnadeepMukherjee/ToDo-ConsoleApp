@@ -33,15 +33,6 @@ class Task {
         return ++taskCounter;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", status='" + status + '\'' +
-                ", deadline='" + deadline + '\'' +
-                '}';
-    }
 }
 
 class ToDoController {
